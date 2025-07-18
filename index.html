@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open When Letters 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #f3f9fb, #fbeff5);
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #b375a2;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      animation: floatText 5s ease-in-out infinite;
+    }
+    @keyframes floatText {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .letters {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      z-index: 2;
+    }
+    a.letter {
+      background: #ffffffdd;
+      border-radius: 12px;
+      padding: 1rem;
+      text-decoration: none;
+      color: #a365a0;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+    a.letter:hover {
+      background: #fff0f7;
+      transform: scale(1.05);
+    }
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .heart {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-image: url('https://i.imgur.com/Y4B5AVC.png');
+      background-size: cover;
+      animation: floatHearts 10s linear infinite;
+    }
+    @keyframes floatHearts {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+    .music-player {
+      margin-top: 2rem;
+    }
+    iframe {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts">
+    <div class="heart" style="left:10%; animation-delay: 0s;"></div>
+    <div class="heart" style="left:30%; animation-delay: 2s;"></div>
+    <div class="heart" style="left:50%; animation-delay: 4s;"></div>
+    <div class="heart" style="left:70%; animation-delay: 1s;"></div>
+    <div class="heart" style="left:90%; animation-delay: 3s;"></div>
+  </div>
+
+  <h1>Open When... 💌</h1>
+  <p>Letters by avuu, with all my heart across the miles 🕊️</p>
+
+  <div class="letters">
+    <a href="letters/happy.html" class="letter">When You're Happy 🌞</a>
+    <a href="letters/anxious.html" class="letter">When You're Anxious 🌧️</a>
+    <a href="letters/lonely.html" class="letter">When You're Lonely 🧸</a>
+    <a href="letters/fight.html" class="letter">After We Fight 🤍</a>
+    <a href="letters/birthday.html" class="letter">On Your Birthday 🎂</a>
+    <a href="letters/love.html" class="letter">When You Need Love ❤️</a>
+  </div>
+
+  <div class="music-player">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2K6m8TGkMcENflwURp0c1a?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <div class="footer">
+    Made with love by sillyava 💌
+  </div>
+</body>
+</html>
